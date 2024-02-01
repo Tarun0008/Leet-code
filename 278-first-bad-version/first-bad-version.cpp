@@ -5,10 +5,10 @@ class Solution {
 public:
    
     int firstBadVersion(int n) {
-        int s=1, e = n, mid;
+        long long s=1, e = n, mid;
         while(s<e)
         {
-            mid = s +(e-s)/2;
+            mid = (s +e)/2;
   
             if(isBadVersion(mid))
              e = mid;  
