@@ -7,7 +7,7 @@ class Solution:
         print(b)
         
         vowels = 'aeiouAEIOU'
-        v = list(vowels)  # Corrected syntax
+        v = list(vowels)  
         
         c, d = 0, 0
         
