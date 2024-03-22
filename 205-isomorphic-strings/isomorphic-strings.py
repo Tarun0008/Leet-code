@@ -1,14 +1,14 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        m1=[]
-        m2=[]
+        a=[]
+        b=[]
         for i in s:
-            m1.append(s.index(i))
+            a.append(s.index(i))
             
         for i in t:
-            m2.append(t.index(i))
+            b.append(t.index(i))
             
-        if m1==m2 :
-            return True
+        if a!=b :
+            return False
        
-        return False
+        return True
