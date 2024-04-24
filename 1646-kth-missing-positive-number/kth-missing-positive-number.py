@@ -1,13 +1,15 @@
 class Solution:
     def findKthPositive(self, arr: List[int], k: int) -> int:
-       
-        list1=[]
-        for i in range(1,2001):
-            list1.append(i)
-        for j in arr:
-            if j in list1:
-                list1.remove(j)
-        return list1[k-1]
+        c=1
+        for num in arr:
+            while c<num:
+                k-=1
+                if k==0:
+                    return c
+                c+=1
+            c=num+1
+        return c+k-1
+
 
 
 
