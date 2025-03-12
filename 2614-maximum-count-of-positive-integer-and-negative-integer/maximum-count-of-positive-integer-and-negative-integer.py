@@ -6,9 +6,9 @@ class Solution:
             if nums[i]==0:
                 pass
             elif nums[i]>0:
-                p=p+1
+                p+=1
             else:
-                n=n+1
+                n+=1
         res=max(p,n)
         print(res)
         return res       
