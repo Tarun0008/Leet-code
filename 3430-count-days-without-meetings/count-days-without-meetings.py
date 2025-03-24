@@ -5,14 +5,24 @@ class Solution:
         print(meetings)
         nm=[]
         wd=0
+        m=0
 
-        for start,end in (meetings):
-            if not nm or nm[-1][1]<start:
-                nm.append([start,end])
-            else:
-                nm[-1][1]=max(nm[-1][1],end)
-        print(nm)
-        for start,end in nm:
-            wd+=end-start+1
-        return days-wd
+        for start,end in meetings:
+            if m+1<start:
+                wd+=start-(m+1)
+            m=max(m,end)
+                
+        wd+=days-m
+        return wd
+
+
+        # for start,end in (meetings):
+        #     if not nm or nm[-1][1]<start:
+        #         nm.append([start,end])
+        #     else:
+        #         nm[-1][1]=max(nm[-1][1],end)
+        # print(nm)
+        # for start,end in nm:
+        #     wd+=end-start+1
+        # return days-wd
 
