@@ -9,8 +9,7 @@ class Solution:
             seen.add(num)
         s=sum(set(nums))
         n=len(nums)
-        print(n,s,d)
 
         ans=(n*(n+1))//2
-        print(ans-s)
+
         return d,ans-s
