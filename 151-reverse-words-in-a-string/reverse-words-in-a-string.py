@@ -3,6 +3,5 @@ class Solution:
         lst=[]
         lst=s.split()
         lst.reverse()
-        print(lst)
         return ' '.join(lst)
         
