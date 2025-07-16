@@ -1,10 +1,14 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
-        seen=set()
+        
+        s=0
 
-        while n!=1:
-            if n in seen:
-                return False
-            seen.add(n)
-            n=sum(int(digit)**2 for digit in str(n))
-        return True 
+        while n>=5:
+            d=0
+            for digit in str(n):
+                d=d+int(digit)**2
+            n=d
+        if n==1:
+            return True
+        else:
+            return False
