@@ -3,10 +3,10 @@ class Solution:
         
         ans=[]
         a=Counter(arr)
-        a.most_common()
+        res=-1
         print(a)
         for key,value in a.items():
             if key==value:
-                ans.append(key)
-            
-        return max(ans) if ans else -1
+                res=max(res,key)
+        return res
+               
