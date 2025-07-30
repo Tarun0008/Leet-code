@@ -1,17 +1,26 @@
 class Solution:
-     def setZeroes(self, matrix: List[List[int]]) -> None:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        rows=len(matrix)
+        cols=len(matrix[0])
+
+        zr=set()
+        zc=set()
+
+        for i in range(rows):
+            for j in range(cols):
+                if matrix[i][j]==0:
+                    zr.add(i)
+                    zc.add(j)
         
-        rows, cols = set(), set()
 
-        # Find the positions of the zeros
-        for i in range(len(matrix)):
-            for j in range(len(matrix[0])):
-                if matrix[i][j] == 0:
-                    rows.add(i)
-                    cols.add(j)
+        for i in zr:
+            for j in range(cols):
+                matrix[i][j]=0
 
-        # Set the elements in the identified rows and columns to zero
-        for i in range(len(matrix)):
-            for j in range(len(matrix[0])):
-                if i in rows or j in cols:
-                    matrix[i][j] = 0
+        for j in zc:
+            for i in range(rows):
+                matrix[i][j]=0
+
