@@ -5,10 +5,9 @@ class Solution:
         
         mergelist=sorted(mergelist)
         nums1[:m+n]=mergelist
-        print(nums1)
-   
+        
 
-        print("[" + ",".join(map(str, nums1)) + "]")
+        
 
 
 
