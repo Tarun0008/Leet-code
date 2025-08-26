@@ -6,13 +6,3 @@ class Solution:
         mergelist=sorted(mergelist)
         nums1[:m+n]=mergelist
         
-
-        
-
-
-
-
-        """
-        Do not return anything, modify nums1 in-place instead.
-        """
-        
